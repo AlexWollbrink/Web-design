@@ -1,0 +1,134 @@
+/* Reset of all margins and paddings */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/**/
+:root
+{
+    /*color scheem for parent*/
+    --Parent-element: 177;
+
+    --Parent-color: hsl(var(--Parent-element), 0%, 50%);
+    --light-Parent-color: hsl(var(--Parent-element), 45%, 90%);
+    --medium-dark-Parent-color: hsl(var(--Parent-element), 45%, 30%);
+    --dark-Parent-color: hsl(var(--Parent-element), 40%, 10%);
+
+    /*color scheem for child 1*/
+    --Child-element1: 0;
+
+    --Child-color: hsl(var(--Child-element1), 100%, 50%);
+    --light-Child-color: hsl(var(--Child-element1), 0%, 90%);
+    --medium-dark-Child-color: hsl(var(--Child-element1), 0%, 30%);
+    --dark-Child-color: hsl(var(--Child-element1), 0%, 10%);
+
+    /*color scheem for child 2*/
+    --Child-element2: 120;
+
+    --Child2-color: hsl(var(--Child-element2), 100%, 50%);
+    --light-Child-color: hsl(var(--Child-element2), 0%, 90%);
+    --medium-dark-Child-color: hsl(var(--Child-element2), 0%, 30%);
+    --dark-Child-color: hsl(var(--Child-element2), 0%, 10%);
+
+    /*color scheem for child 3*/
+    --Child-element3: 226;
+
+    --Child3-color: hsl(var(--Child-element3), 100%, 50%);
+    --light-Child-color: hsl(var(--Child-element3), 0%, 90%);
+    --medium-dark-Child-color: hsl(var(--Child-element3), 0%, 30%);
+    --dark-Child-color: hsl(var(--Child-element3), 0%, 10%);
+
+    /*color scheem for child 4*/
+    --Child-element4: 30;
+
+    --Child4-color: hsl(var(--Child-element4), 100%, 50%);
+    --light-Child-color: hsl(var(--Child-element4), 0%, 90%);
+    --medium-dark-Child-color: hsl(var(--Child-element4), 0%, 30%);
+    --dark-Child-color: hsl(var(--Child-element4), 0%, 10%);
+
+}
+
+.Wrapper
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;    
+}
+
+h4
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.parent
+{
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.parent2
+{
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.parent3
+{
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parent4
+{
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+div div
+{
+    width: 100px;
+    padding: 10px;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-size: 42px;
+}
+.child
+{
+    background-color:var(--Child-color);
+    
+}
+
+.child2
+{
+    background-color:var(--Child2-color);
+}
+
+.child3
+{
+    background-color:var(--Child3-color);
+}
+
+.child4
+{
+    background-color:var(--Child4-color);    
+}
