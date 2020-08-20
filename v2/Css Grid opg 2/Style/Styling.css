@@ -8,13 +8,15 @@
 
 :root
 {
-    /* used for background color */
+    /* used for background color on heade, hero, main*/
     --background-hue: 207;
-/* "var (ingen kolon )" */
-    --main-background-color: hsl(var(--background-hue), 50%, 70%);
-    --light-background-color: hsl(var(--background-hue), 30%, 83%);
-    --medium-dark-background-color: hsl(var(--background-hue), 100%, 50%);
-    --dark-background-color: hsl(var(--background-hue), 50%, 30%);
+    --background-hue-2: 0;
+    --background-hue-3: 
+
+    --main: hsl(var(--background-hue), 30%, 20%);
+    --hero: hsl(var(--background-hue), 40%, 55%);
+    --header: hsl(var(--background-hue), 0%, 0%);
+    --menu: hsl(var(--background-hue-2), 100%, 50%);
 }
 
 /* for mobile */
@@ -72,17 +74,22 @@ h1
 
 .item-d
 {
-    grid-area: footer;
+    grid-area: banner;
 }
 
 .item-e
 {
-    grid-area: side-1;
+    grid-area: hero;
 }
 
 .item-f
 {
-    grid-area: side-2;
+    grid-area: extra;
+}
+
+.item-g
+{
+    grid-area: img;
 }
 
 /* for tablet */
