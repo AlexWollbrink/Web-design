@@ -1,0 +1,108 @@
+/* Reset of all margins and paddings */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    /* used for background color */
+    --background-hue: 207;
+/* "var (ingen kolon )" */
+    --main-background-color: hsl(var(--background-hue), 50%, 70%);
+    --light-background-color: hsl(var(--background-hue), 30%, 83%);
+    --medium-dark-background-color: hsl(var(--background-hue), 100%, 50%);
+    --dark-background-color: hsl(var(--background-hue), 50%, 30%);
+}
+
+/* for mobile */
+.container
+{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 80px auto 80px;
+    grid-template-areas: "header" 
+                         "menu-1" 
+                         "main" 
+                         "footer";
+    height: 100vh;
+}
+
+.item-a, .item-b, .item-c, .item-d, .item-e, .item-f
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* same background color in both items */
+.item-a, .item-d
+{
+    background-color: var(--dark-background-color);
+}
+
+.item-e, .item-f
+{    
+    display: none;
+}
+
+h1
+{
+    color: hsl(0, 0%, 100%);
+}
+
+.item-a
+{    
+    grid-area: header;
+}
+
+.item-b
+{
+    grid-area: main;
+    background-color: var(--light-background-color);
+}
+
+.item-c
+{    
+    grid-area: menu-1;
+    background-color: var(--main-background-color);
+}
+
+.item-d
+{
+    grid-area: footer;
+}
+
+.item-e
+{
+    grid-area: side-1;
+}
+
+.item-f
+{
+    grid-area: side-2;
+}
+
+
+/* for pc */
+@media only screen and (min-width: 600px)
+{
+    .container
+    {
+        display:grid;
+        grid-template-columns: 1fr 1fr 3fr 1fr;
+        grid-template-rows: 80px auto 80px;
+        grid-template-areas: "header header header header" 
+                             "side-1 menu-1 main side-2" 
+                             "footer footer footer footer";
+        height: 100vh;
+    }
+
+    .item-e, .item-f
+    {
+        display: flex;
+        background-color: var(--medium-dark-background-color);
+    }
+}
