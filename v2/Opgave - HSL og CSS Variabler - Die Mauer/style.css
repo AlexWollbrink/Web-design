@@ -1,3 +1,23 @@
+/**/
+:root
+{
+    --main-hue: 177;
+
+    --main-color: hsl(var(--main-hue), 45%, 80%);
+    --light-main-color: hsl(var(--main-hue), 45%, 90%);
+    --medium-dark-main-color: hsl(var(--main-hue), 45%, 30%);
+    --dark-main-color: hsl(var(--main-hue), 40%, 10%);
+
+    /*text colors*/
+    --second-hue: 0;
+
+    --second-color: hsl(var(--second-hue), 0%, 70%);
+    --light-second-color: hsl(var(--second-hue), 0%, 90%);
+    --medium-dark-second-color: hsl(var(--second-hue), 0%, 30%);
+    --dark-second-color: hsl(var(--second-hue), 0%, 10%);
+
+}
+
 /* Reset of all margins and paddings */
 
 *
@@ -10,6 +30,7 @@
 
 body
 {
+    background-color: var(--main-color);
     width: 1200px;
     height: 100vh;
     margin: 0 auto;
@@ -20,7 +41,7 @@ body
 
 header
 {
-    background-color: #CCCCCC;
+    background-color: var(--light-main-color);
     height: 100px;
 }
 
@@ -40,13 +61,13 @@ nav ul
 nav ul a, footer a
 {
     text-decoration: none;
-    color: white;
+    color: var(--second-color);
     padding: 0 2em;
 }
 
 nav ul li:hover
 {
-    background-color: #BBBFBA;
+    background-color: var(--second-color);
 }
 
 /* Top navigation styling (and some also apply for footer) */
@@ -54,8 +75,8 @@ nav ul li:hover
 nav.top, footer
 {
     height: 40px;
-    background-color: #565952;
-    color: white;
+    background-color: var(--dark-main-color);
+    color: var(--light-second-color);
 }
 
 nav.top ul li
@@ -70,12 +91,12 @@ nav.side
     float: left;
     height: 100%;
     width: 15%;
-    background-color: #BBBFBA;
+    background-color: var(--light-main-color);
 }
 
 nav.side ul
 {
-    background-color: rgba(50, 54, 84, 0.8);
+    background-color: var(--dark-main-color);
 }
 
 nav.side ul li a
@@ -136,15 +157,15 @@ article img
 
 h2
 {
-    color: #BBBFBA;
+    color: var(--second-color);
     margin-bottom: 1em;
     padding-bottom: 1em;
-    border-bottom: 1px solid #BBBFBA;
+    border-bottom: 1px solid var(--second-color);
 }
 
 h3
 {
-    color: rgba(50, 54, 84, 0.9);
+    color: var(--medium-dark-second-color);
     line-height: 14px;
     padding-bottom: 2px;
 }
