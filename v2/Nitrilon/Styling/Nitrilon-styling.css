@@ -34,6 +34,8 @@
     height: 100vh;
 }
 
+/*Visning af FLEX og centrerer teskten i centrum,
+der er cenreret fra oven og fra neden og fra begge sider*/
 .item-a, .item-b, .item-c, .item-d, .item-e, .item-f, .item-g
 {
     display: flex;
