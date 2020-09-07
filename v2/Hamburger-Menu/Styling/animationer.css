@@ -10,17 +10,131 @@
     --background-hue: 209;
     
     --head: hsl(var(--background-hue), 50%, 30%);
+    --head1: hsla(var(--background-hue), 50%, 30%, 90%);
     --TextColor: hsl(var(--background-hue), 10%, 100%);
     --main: hsl(var(--background-hue), 20%, 80%);
+
+    --background-hue2: 41;
+    
+    --hover: hsl(var(--background-hue2), 80%, 20%);
     
 }
 
-/* body
+body
 {
-    width: 100%;
-} */
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
 
-.container
+header, footer
+{
+    height: 80px;
+    background-color: var(--head);
+}
+
+header, main, footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--TextColor);
+}
+
+main
+{
+    background-color: var(--main);
+    height: 100%;
+}
+
+.menu-btn, nav img
+{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+
+}
+
+.menu-btn
+{
+    z-index: 7;
+    cursor: pointer;
+}
+
+nav .menu-Open
+{
+    display: block;
+}
+
+nav .menu-Close
+{
+    display: none;
+}
+
+nav .menu-btn:checked ~ .menu-Open
+{
+    display: none;
+
+}
+
+nav .menu-btn:checked ~ .menu-Close
+{
+    display: block;
+}
+
+nav .menu-btn
+{
+    opacity: 0.0;
+}
+
+.menu-Open, .menu-Close /* or nav img*/
+{
+    z-index: 6;
+}
+
+ul
+{
+    list-style-type: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--head1);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+    transition-timing-function: linear;
+}
+
+nav .menu-btn:checked ~ ul
+{
+   transform: translateX(0%);
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: var(--TextColor); 
+    text-transform: uppercase;   
+}
+
+nav ul li
+{
+    margin: 2rem 0;
+}
+
+nav ul li:hover
+{
+    background-color: var(--hover);
+}
+
+/* .container
 {
     display:grid;
     grid-template-columns: 1fr;
@@ -33,14 +147,28 @@
     width: 100%;
 }
 
-nav
+nav ul
 {
-    background-color: hsl(209, 30, 60);
+    background-color: hsla(220, 30%, 60%, 0.9);    
+    text-align: center;
+    list-style-type: none;
     width: 100vw;
-    height: 100vh;
-    opacity: 0,9;
-    position: fixed top 0;
-    transform: translate(-100%);
+    height: 100hw;
+    opacity: 0.9;
+    position: absolute; top: -20px;
+    z-index: 2;
+    transform: translateX(-100%);
+} */
+
+/* li
+{
+    margin: 60px;
+}
+
+nav ul li a
+{
+    text-decoration: none;    
+    color: var(--TextColor);
 }
 
 @keyframes main
@@ -50,18 +178,57 @@ nav
     100%{scale: 1,0;}
 }
 
-img, input 
+img, input
 {
     width: 50px;
     height: 50px;
     position: absolute;
+    z-index: 3;
     left: 0px;
     top: 0px;
 }
 
 input
 {
+    position: absolute;
+    z-index: 4;
     opacity: 0;
+} */
+
+/*make class name for btn, and imgs
+so you can style on them individuely*/
+
+/*make both .classname:checked ~
+        and .classname ~
+        ~ = tilde is a sibling */
+/* .menu-btn:checked ~ .menu-Open
+{
+    display: none;
+}
+
+.menu-btn:checked ~ ul
+{
+    transform: translateX(0%)
+}
+
+.menu-btn:checked ~ .menu-Close
+{
+    display: block;
+}
+
+.menu-btn ~ .menu-Open
+{
+    display: block;
+}
+
+.menu-btn ~ .menu-Close
+{
+    display: none;
+}
+
+.Menu-Close
+{    
+    display: none
 }
 
 .item-a, .item-b, .item-c
@@ -91,5 +258,5 @@ input
 .item-c
 {    
     grid-area: footer;   
-}
+}*/
 

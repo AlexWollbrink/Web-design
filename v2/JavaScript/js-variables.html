@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*opg 01 skriv en hilsen, at kunne udskrive en element i console*/
+        var greetings= "Hello world";
+
+        /*opg 02 skriv fuld navn, at kunne udskrive en element i console*/
+        var firstName = "John";
+        console.log(firstName);
+        var middelName = " F. ";
+        console.log(middelName);
+        var lastName = "Kennedy";
+        console.log(lastName);
+
+        var fullName = firstName + middelName + lastName;
+        console.log(fullName);
+
+        /*opg 03 at kunne udskrive en værdi i console*/
+        var salary = 5000;
+        console.log(salary);
+        /* opg 04 at kunne lægge sammen i konsole*/
+        var add = (5+5)*3
+        console.log(add);
+        /* opg 05 at kunne trægge fra i konsole*/
+        var num1 = 42;
+        var num2 = 10;
+        var sum1 = num1 + num2;
+        console.log(sum1);
+        /* opg 06 at kunne runde op i konsole*/
+        var deci1 = 2.25;
+        var deci2 = 3.50;
+        var sum2 = Math.ceil (deci1 + deci2);
+        console.log(sum2);
+        /* opg 07 at kunne runde ned i konsole*/
+        var deci3 = 2.55;
+        var deci4 = 1.44;
+        var sum3 = Math.floor (deci3 + deci4);
+        console.log(sum3);
+        /* opg 08 at kunne finde kvadratrod i konsole*/
+        var num = 65;
+        var value = Math.sqrt( 65 );
+        /*.toFixed(2) reducerer til 2 decimaler efter ,*/
+        console.log(value.toFixed(2));
+        
+        /* opg 09 udtrække secment fra en text streng*/
+        var str = "Jhon Doe is 25 years old!";
+        /* Slice (5,8) giver mig Doe udskrevet i konsolen*/
+        var res = str.slice(5,8);
+        /*erstatter Doe men anden text*/
+        var res1 = str.replace(" Doe" , " Wick")
+        console.log(res);
+        console.log(res1);
+
+        /*opg 10 boolean lavet så den viser falsk*/
+        console.log(10>20);
+    </script>
+</body>
+</html>
